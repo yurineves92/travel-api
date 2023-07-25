@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Tour extends Model
 {
     use HasFactory, HasUuids;
- 
+
     protected $fillable = [
         'travel_id',
         'name',
@@ -19,7 +19,7 @@ class Tour extends Model
         'ending_date',
         'price',
     ];
- 
+
     public function travel(): BelongsTo
     {
         return $this->belongsTo(Travel::class);
